@@ -12,7 +12,7 @@
 			<key>NSMenuItem</key>
 			<dict>
 				<key>default</key>
-				<string>Scale image down (800px)</string>
+				<string>Split vocal</string>
 			</dict>
 			<key>NSMessage</key>
 			<string>runWorkflowAsService</string>
@@ -23,7 +23,7 @@
 			</dict>
 			<key>NSSendFileTypes</key>
 			<array>
-				<string>public.image</string>
+				<string>public.audio</string>
 			</array>
 		</dict>
 	</array>

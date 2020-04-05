@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>AMApplicationBuild</key>
-	<string>409</string>
+	<string>492</string>
 	<key>AMApplicationVersion</key>
-	<string>2.5</string>
+	<string>2.10</string>
 	<key>AMDocumentVersion</key>
 	<string>2</string>
 	<key>actions</key>
@@ -50,7 +50,7 @@
 				<key>ActionParameters</key>
 				<dict/>
 				<key>BundleIdentifier</key>
-				<string>com.apple.Automator.Duplicate_Finder_Items</string>
+				<string>com.apple.Automator.DuplicateFinderItems</string>
 				<key>CFBundleVersion</key>
 				<string>1.1.1</string>
 				<key>CanShowSelectedItemsWhenRun</key>
@@ -81,8 +81,6 @@
 				</array>
 				<key>arguments</key>
 				<dict/>
-				<key>conversionLabel</key>
-				<integer>0</integer>
 			</dict>
 		</dict>
 		<dict>
@@ -562,7 +560,7 @@
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>546.500000:324.000000</string>
+				<string>483.500000:375.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Rename Finder Items.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -580,7 +578,7 @@
 					<false/>
 					<key>Types</key>
 					<array>
-						<string>com.apple.cocoa.path</string>
+						<string>public.image</string>
 					</array>
 				</dict>
 				<key>AMActionVersion</key>
@@ -606,7 +604,7 @@
 					<string>List</string>
 					<key>Types</key>
 					<array>
-						<string>com.apple.cocoa.path</string>
+						<string>public.image</string>
 					</array>
 				</dict>
 				<key>ActionBundlePath</key>
@@ -713,7 +711,7 @@
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>546.500000:429.000000</string>
+				<string>483.500000:479.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Scale Images.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -723,23 +721,44 @@
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>43090FA8-DD6F-4FF7-9F87-D3C7303E6D6C</key>
-		<dict>
-			<key>from</key>
-			<string>F2421D8B-A2EE-49CA-9B35-D0295C00F01D - F2421D8B-A2EE-49CA-9B35-D0295C00F01D</string>
-			<key>to</key>
-			<string>9F37B1D9-8AEC-4F9B-A5DB-741D98735B68 - 9F37B1D9-8AEC-4F9B-A5DB-741D98735B68</string>
-		</dict>
-		<key>B9D8C2D4-92BA-4B3F-A7F9-09BD2C2F0D92</key>
+		<key>8F503531-FAE9-43F4-8DC8-D202FE4E0C12</key>
 		<dict>
 			<key>from</key>
 			<string>9F37B1D9-8AEC-4F9B-A5DB-741D98735B68 - 9F37B1D9-8AEC-4F9B-A5DB-741D98735B68</string>
 			<key>to</key>
 			<string>04565A3C-AEAB-43A1-947F-00E0A06ED9D8 - 04565A3C-AEAB-43A1-947F-00E0A06ED9D8</string>
 		</dict>
+		<key>A7D6AD8E-B403-4F7B-90B9-479AACA5230C</key>
+		<dict>
+			<key>from</key>
+			<string>F2421D8B-A2EE-49CA-9B35-D0295C00F01D - F2421D8B-A2EE-49CA-9B35-D0295C00F01D</string>
+			<key>to</key>
+			<string>9F37B1D9-8AEC-4F9B-A5DB-741D98735B68 - 9F37B1D9-8AEC-4F9B-A5DB-741D98735B68</string>
+		</dict>
 	</dict>
 	<key>workflowMetaData</key>
 	<dict>
+		<key>applicationBundleID</key>
+		<string>com.apple.finder</string>
+		<key>applicationBundleIDsByPath</key>
+		<dict>
+			<key>/System/Library/CoreServices/Finder.app</key>
+			<string>com.apple.finder</string>
+		</dict>
+		<key>applicationPath</key>
+		<string>/System/Library/CoreServices/Finder.app</string>
+		<key>applicationPaths</key>
+		<array>
+			<string>/System/Library/CoreServices/Finder.app</string>
+		</array>
+		<key>inputTypeIdentifier</key>
+		<string>com.apple.Automator.fileSystemObject.image</string>
+		<key>outputTypeIdentifier</key>
+		<string>com.apple.Automator.nothing</string>
+		<key>presentationMode</key>
+		<integer>15</integer>
+		<key>processesInput</key>
+		<integer>0</integer>
 		<key>serviceApplicationBundleID</key>
 		<string>com.apple.finder</string>
 		<key>serviceApplicationPath</key>
@@ -749,6 +768,10 @@
 		<key>serviceOutputTypeIdentifier</key>
 		<string>com.apple.Automator.nothing</string>
 		<key>serviceProcessesInput</key>
+		<integer>0</integer>
+		<key>systemImageName</key>
+		<string>NSActionTemplate</string>
+		<key>useAutomaticInputType</key>
 		<integer>0</integer>
 		<key>workflowTypeIdentifier</key>
 		<string>com.apple.Automator.servicesMenu</string>

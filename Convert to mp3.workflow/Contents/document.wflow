@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>AMApplicationBuild</key>
-	<string>428</string>
+	<string>381</string>
 	<key>AMApplicationVersion</key>
-	<string>2.7</string>
+	<string>2.4</string>
 	<key>AMDocumentVersion</key>
 	<string>2</string>
 	<key>actions</key>
@@ -61,7 +61,7 @@
 					<key>COMMAND_STRING</key>
 					<string>for f in "$@"
 do
-	/usr/local/bin/ffmpeg -i "$f" -codec:a libmp3lame -qscale:a 3 "${f//+(*\/|\.*)}.mp3"
+	/usr/local/bin/lame --preset extreme "$f"
 done</string>
 					<key>CheckedForUserDefaultShell</key>
 					<true/>
@@ -175,7 +175,7 @@ done</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>373.000000:433.000000</string>
+				<string>373.500000:554.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/English.lproj/main.nib</string>
 			</dict>

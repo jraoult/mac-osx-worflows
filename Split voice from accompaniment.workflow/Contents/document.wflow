@@ -59,16 +59,18 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>COMMAND_STRING</key>
-					<string>for f in "$@"
+					<string>PATH="/usr/local/Caskroom/miniconda/base/bin:$PATH"
+
+for f in "$@"
 do
-	/usr/local/bin/ffmpeg -i "$f" "${f%.*}.wav"
+	spleeter separate -i "$f" -p spleeter:2stems -o $(dirname "$f")
 done</string>
 					<key>CheckedForUserDefaultShell</key>
 					<true/>
 					<key>inputMethod</key>
 					<integer>1</integer>
 					<key>shell</key>
-					<string>/bin/bash</string>
+					<string>/bin/zsh</string>
 					<key>source</key>
 					<string></string>
 				</dict>
@@ -87,7 +89,7 @@ done</string>
 				<key>Class Name</key>
 				<string>RunShellScriptAction</string>
 				<key>InputUUID</key>
-				<string>58B726D5-EBB4-449A-B084-3D5034C88CA0</string>
+				<string>B1C8E44B-BF8F-44D2-97A1-DAAB27C348FD</string>
 				<key>Keywords</key>
 				<array>
 					<string>Shell</string>
@@ -97,9 +99,9 @@ done</string>
 					<string>Unix</string>
 				</array>
 				<key>OutputUUID</key>
-				<string>556E8924-7D35-46FE-B62E-D2A78BB5349B</string>
+				<string>3D7F5D90-4E77-4D40-A5FB-6613398BA7B5</string>
 				<key>UUID</key>
-				<string>FAEFC879-76EE-4F0A-8A7C-5B5C8B8FE343</string>
+				<string>6E4AA15E-EE5E-410F-A0C5-D98206DF3834</string>
 				<key>UnlocalizedApplications</key>
 				<array>
 					<string>Automator</string>
@@ -182,9 +184,166 @@ done</string>
 			<key>isViewVisible</key>
 			<true/>
 		</dict>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>AMAccepts</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<true/>
+					<key>Types</key>
+					<array/>
+				</dict>
+				<key>AMActionVersion</key>
+				<string>1.0</string>
+				<key>AMApplication</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>AMParameterProperties</key>
+				<dict>
+					<key>message</key>
+					<dict>
+						<key>tokenizedValue</key>
+						<array>
+							<string>Split of the audio files finished</string>
+						</array>
+					</dict>
+					<key>subtitle</key>
+					<dict>
+						<key>tokenizedValue</key>
+						<array/>
+					</dict>
+					<key>title</key>
+					<dict>
+						<key>tokenizedValue</key>
+						<array>
+							<string>Split voice from accompaniment</string>
+						</array>
+					</dict>
+				</dict>
+				<key>AMProvides</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Types</key>
+					<array/>
+				</dict>
+				<key>ActionBundlePath</key>
+				<string>/System/Library/Automator/Display Notification.action</string>
+				<key>ActionName</key>
+				<string>Display Notification</string>
+				<key>ActionParameters</key>
+				<dict>
+					<key>message</key>
+					<string>Split of the audio files finished</string>
+					<key>subtitle</key>
+					<string></string>
+					<key>title</key>
+					<string>Split voice from accompaniment</string>
+				</dict>
+				<key>BundleIdentifier</key>
+				<string>com.apple.Automator.Display-Notification</string>
+				<key>CFBundleVersion</key>
+				<string>1.0</string>
+				<key>CanShowSelectedItemsWhenRun</key>
+				<true/>
+				<key>CanShowWhenRun</key>
+				<false/>
+				<key>Category</key>
+				<array>
+					<string>AMCategoryUtilities</string>
+				</array>
+				<key>Class Name</key>
+				<string>AMDisplayNotificationAction</string>
+				<key>InputUUID</key>
+				<string>A358DE63-BF48-4ABD-B41B-169A507D63F1</string>
+				<key>Keywords</key>
+				<array/>
+				<key>OutputUUID</key>
+				<string>C1B297CF-2CAB-41DE-9733-56443800CECB</string>
+				<key>UUID</key>
+				<string>0CE889E5-E028-4E73-82E5-C590EB851607</string>
+				<key>UnlocalizedApplications</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>arguments</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>default value</key>
+						<string></string>
+						<key>name</key>
+						<string>message</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>0</string>
+					</dict>
+					<key>1</key>
+					<dict>
+						<key>default value</key>
+						<string></string>
+						<key>name</key>
+						<string>subtitle</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>1</string>
+					</dict>
+					<key>2</key>
+					<dict>
+						<key>default value</key>
+						<string></string>
+						<key>name</key>
+						<string>title</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>2</string>
+					</dict>
+				</dict>
+				<key>isViewVisible</key>
+				<true/>
+				<key>location</key>
+				<string>483.500000:494.000000</string>
+				<key>nibPath</key>
+				<string>/System/Library/Automator/Display Notification.action/Contents/Resources/Base.lproj/main.nib</string>
+			</dict>
+			<key>isViewVisible</key>
+			<true/>
+		</dict>
 	</array>
 	<key>connectors</key>
-	<dict/>
+	<dict>
+		<key>84629E71-97F2-4969-88CE-0F8C571A4D34</key>
+		<dict>
+			<key>from</key>
+			<string>6E4AA15E-EE5E-410F-A0C5-D98206DF3834 - 6E4AA15E-EE5E-410F-A0C5-D98206DF3834</string>
+			<key>to</key>
+			<string>0CE889E5-E028-4E73-82E5-C590EB851607 - 0CE889E5-E028-4E73-82E5-C590EB851607</string>
+		</dict>
+	</dict>
+	<key>variables</key>
+	<array>
+		<dict>
+			<key>UUID</key>
+			<string>FF77CEAA-7C3B-49AD-B72F-0B117912E1CD</string>
+			<key>identifier</key>
+			<string>com.apple.Automator.Variable.Storage</string>
+			<key>name</key>
+			<string>inputName</string>
+		</dict>
+	</array>
 	<key>workflowMetaData</key>
 	<dict>
 		<key>applicationBundleID</key>
@@ -200,6 +359,8 @@ done</string>
 		<array>
 			<string>/System/Library/CoreServices/Finder.app</string>
 		</array>
+		<key>customImageFileExtension</key>
+		<string>png</string>
 		<key>inputTypeIdentifier</key>
 		<string>com.apple.Automator.fileSystemObject.music</string>
 		<key>outputTypeIdentifier</key>
